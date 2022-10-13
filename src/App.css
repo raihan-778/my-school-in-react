@@ -3,7 +3,8 @@
   padding: 0;
 }
 #root {
-  max-width: 1280px;
+  width: screen;
   margin: 0 auto;
   padding: 2rem;
+  height: auto;
 }

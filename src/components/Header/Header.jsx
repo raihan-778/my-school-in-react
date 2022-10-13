@@ -39,6 +39,12 @@ const Header = () => {
           >
             Academics
           </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : undefined)}
+            to="/activities"
+          >
+            Activities
+          </NavLink>
         </Navbar.Collapse>
       </Navbar>
       {/* This is Flowbite components */}

@@ -1,11 +1,12 @@
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import {} from "firebase/auth";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Main from "./Layouts/Main";
-import Home from "./components/Home/Home";
+import "./App.css";
 import About from "./components/About/About";
 import Academics from "./components/Academics/Academics";
+import Activity from "./components/Activities/Activity";
 import Error from "./components/Error/Error";
+import Home from "./components/Home/Home";
+import Main from "./Layouts/Main";
 
 function App() {
   const router = createBrowserRouter([
@@ -15,6 +16,9 @@ function App() {
       children: [
         {
           path: "home",
+          loader: async () => {
+            return fetch(`fakeInfo.json`);
+          },
           element: <Home></Home>,
         },
         {
@@ -25,6 +29,10 @@ function App() {
           path: "academics",
           element: <Academics></Academics>,
         },
+        {
+          path: "activities",
+          element: <Activity></Activity>,
+        },
       ],
     },
     {
@@ -34,8 +42,9 @@ function App() {
   ]);
 
   return (
-    <div className="App ">
+    <div className="App min-h-screen">
       <RouterProvider router={router}></RouterProvider>
+      const auth = getAuth()
     </div>
   );
 }
