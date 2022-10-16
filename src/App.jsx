@@ -44,7 +44,6 @@ function App() {
   return (
     <div className="App min-h-screen">
       <RouterProvider router={router}></RouterProvider>
-      const auth = getAuth()
     </div>
   );
 }

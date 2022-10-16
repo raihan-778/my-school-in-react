@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
 
-const Banner = () => {
+const Banner = ({ user }) => {
   return (
     <div>
       <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 ">
@@ -24,6 +24,7 @@ const Banner = () => {
           />
         </Carousel>
       </div>
+      
     </div>
   );
 };
